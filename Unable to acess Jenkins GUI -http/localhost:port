@@ -1,0 +1,40 @@
+ubuntu@ip-172-31-33-17:~$ systemctl status jenkins
+● jenkins.service - LSB: Start Jenkins at boot time
+   Loaded: loaded (/etc/init.d/jenkins; generated)
+   Active: active (exited) since Sun 2018-12-30 09:21:14 UTC; 1h 54min ago
+     Docs: man:systemd-sysv-generator(8)
+    Tasks: 0 (limit: 1152)
+   CGroup: /system.slice/jenkins.service
+
+Dec 30 09:21:11 ip-172-31-33-17 systemd[1]: Starting LSB: Start Jenkins at boot time...
+Dec 30 09:21:12 ip-172-31-33-17 jenkins[946]: Correct java version found
+Dec 30 09:21:12 ip-172-31-33-17 jenkins[946]:  * Starting Jenkins Automation Server jenkins
+Dec 30 09:21:12 ip-172-31-33-17 su[1074]: Successful su for jenkins by root
+Dec 30 09:21:12 ip-172-31-33-17 su[1074]: + ??? root:jenkins
+Dec 30 09:21:12 ip-172-31-33-17 su[1074]: pam_unix(su:session): session opened for user jenkins by (uid=0)
+Dec 30 09:21:13 ip-172-31-33-17 su[1074]: pam_unix(su:session): session closed for user jenkins
+Dec 30 09:21:14 ip-172-31-33-17 jenkins[946]:    ...done.
+Dec 30 09:21:14 ip-172-31-33-17 systemd[1]: Started LSB: Start Jenkins at boot time.
+ubuntu@ip-172-31-33-17:~$ ^C
+ubuntu@ip-172-31-33-17:~$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+8080                       ALLOW       Anywhere
+OpenSSH                    ALLOW       Anywhere
+8080 (v6)                  ALLOW       Anywhere (v6)
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+
+ubuntu@ip-172-31-33-17:~$
+
+
+## Tried with publicIP as well no use!! Error::"this site can't be reached""
+#Jenkins status is Active
+#firewall is openned
+## tried changing port java -jar jenkins.war --httpPort=<your port>
+#how do i get GUI
+#my Server AWS/Ubuntu 18.04
+#java-8-oracle installed
+## Can anyone help me out what could be the reason!!
+Thanks heaps
